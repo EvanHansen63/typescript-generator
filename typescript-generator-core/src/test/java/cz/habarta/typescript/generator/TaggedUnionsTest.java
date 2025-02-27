@@ -392,7 +392,7 @@ public class TaggedUnionsTest {
         final Settings settings = TestUtils.settings();
         final String output = new TypeScriptGenerator(settings).generateTypeScript(Input.from(Earth.class));
         Assertions.assertTrue(output.contains("EngineUnion"));
-        Assertions.assertTrue(output.contains("VehiculeUnion<M>"));
+        Assertions.assertTrue(output.contains("VehiculeUnion<M extends Engine>"));
     }
 
     public static void main(String[] args) throws Exception {
